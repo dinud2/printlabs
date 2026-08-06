@@ -17,3 +17,8 @@
   from = "/success"
   to = "/success.html"
   status = 200
+
+[[redirects]]
+  from = "/review"
+  to = "/review.html"
+  status = 200

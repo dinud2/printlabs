@@ -27,6 +27,7 @@
 <div class="w-20 h-20 rounded-full bg-tertiary-container/10 flex items-center justify-center">
 <span class="material-symbols-outlined text-tertiary text-[44px]">check_circle</span>
 </div>
+<div class="w-full flex flex-col items-center text-center gap-md" id="successConsult">
 <h1 class="font-headline-lg text-headline-lg text-on-surface">Request received!</h1>
 <p class="font-body-md text-body-md text-on-surface-variant">Thanks for sharing your project. We're reviewing your details and files now, and you'll receive a <strong class="text-on-surface">detailed quote by email within 24 hours</strong>, usually much sooner.</p>
 <div class="w-full bg-surface-container rounded-xl p-md flex flex-col gap-sm text-left">
@@ -43,6 +44,12 @@
 <span class="font-label-md text-label-md text-on-surface">Email update when your order ships</span>
 </div>
 </div>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Printed with us before? <a class="text-primary hover:underline" href="review.html">Leave a review</a></p>
+</div>
+<div class="w-full flex-col items-center text-center gap-md hidden" id="successReview">
+<h1 class="font-headline-lg text-headline-lg text-on-surface">Thanks for your review!</h1>
+<p class="font-body-md text-body-md text-on-surface-variant">We read every review personally — it means a lot. If we feature yours on the site, we'll use the name you provided and never share your email.</p>
+</div>
 <div class="flex flex-wrap items-center justify-center gap-sm pt-xs">
 <a class="bg-primary text-on-primary px-lg py-sm rounded-lg font-label-md text-label-md hover:bg-primary/90 transition-colors shadow-sm" href="index.html">Back to Home</a>
 <a class="bg-surface-container text-on-surface px-lg py-sm rounded-lg font-label-md text-label-md hover:bg-surface-container-high transition-colors shadow-sm flex items-center gap-xs" href="work.html">Browse Our Work <span class="material-symbols-outlined text-sm">arrow_forward</span></a>
@@ -50,5 +57,14 @@
 <p class="font-label-sm text-label-sm text-on-surface-variant">Questions in the meantime? <a class="text-primary hover:underline" href="mailto:dinud.dass@gmail.com">dinud.dass@gmail.com</a></p>
 </div>
 </main>
-<footer class="w-full bg-surface-container-low py-xl border-t border-outline-variant"><div class="max-w-[1200px] mx-auto px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row items-center justify-between gap-lg"><div class="flex flex-col gap-xs items-center md:items-start"><div class="flex items-center gap-xs mb-xs"><img alt="3D Printing Labs logo" class="w-7 h-7" src="assets/logo-mark.png"/><span class="font-headline-md text-headline-md text-on-surface">3D Printing Labs</span></div><p class="font-label-sm text-label-sm text-on-surface-variant">Crafting excellence in every layer. Proudly Canadian.</p></div><div class="flex flex-wrap justify-center gap-lg"><a class="font-label-sm text-label-sm text-on-surface hover:text-primary transition-colors" href="work.html">Our Work</a><a class="font-label-sm text-label-sm text-on-surface hover:text-primary transition-colors" href="consultation.html">Start a Project</a><a class="font-label-sm text-label-sm text-on-surface hover:text-primary transition-colors" href="tos.html">Terms of Service</a><a class="font-label-sm text-label-sm text-on-surface hover:text-primary transition-colors" href="mailto:dinud.dass@gmail.com">dinud.dass@gmail.com</a></div></div></footer>
+<script>
+  if (new URLSearchParams(location.search).get('form') === 'review') {
+    document.getElementById('successConsult').classList.add('hidden');
+    const review = document.getElementById('successReview');
+    review.classList.remove('hidden');
+    review.classList.add('flex');
+    document.title = 'Review Received | 3D Printing Labs';
+  }
+</script>
+<footer class="w-full bg-surface-container-low py-xl border-t border-outline-variant"><div class="max-w-[1200px] mx-auto px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row items-center justify-between gap-lg"><div class="flex flex-col gap-xs items-center md:items-start"><div class="flex items-center gap-xs mb-xs"><img alt="3D Printing Labs logo" class="w-7 h-7" src="assets/logo-mark.png"/><span class="font-headline-md text-headline-md text-on-surface">3D Printing Labs</span></div><p class="font-label-sm text-label-sm text-on-surface-variant">Crafting excellence in every layer. Proudly Canadian.</p></div><div class="flex flex-wrap justify-center gap-lg"><a class="font-label-sm text-label-sm text-on-surface hover:text-primary transition-colors" href="work.html">Our Work</a><a class="font-label-sm text-label-sm text-on-surface hover:text-primary transition-colors" href="consultation.html">Start a Project</a><a class="font-label-sm text-label-sm text-on-surface hover:text-primary transition-colors" href="review.html">Leave a Review</a><a class="font-label-sm text-label-sm text-on-surface hover:text-primary transition-colors" href="tos.html">Terms of Service</a><a class="font-label-sm text-label-sm text-on-surface hover:text-primary transition-colors" href="mailto:dinud.dass@gmail.com">dinud.dass@gmail.com</a></div></div></footer>
 </body></html>
