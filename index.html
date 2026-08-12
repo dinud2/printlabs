@@ -257,6 +257,9 @@
   4. Stars: use N filled spans (style="font-variation-settings:'FILL' 1;" text-primary) and 5-N outline
      spans (text-outline-variant), and update the aria-label "Rated N out of 5 stars".
   5. Keep 3-6 cards; retire the oldest first.
+  6. There is currently one review, so the grid is a centered single column. When you
+     publish a second one, change the grid back to "grid grid-cols-1 md:grid-cols-3 gap-md"
+     and drop the "max-w-[560px] mx-auto".
 
   Blank card template:
   <div class="bg-surface rounded-xl p-lg shadow-sm hover:shadow-md transition-shadow flex flex-col gap-sm">
@@ -271,8 +274,7 @@
   </div>
   </div>
 -->
-<div class="grid grid-cols-1 md:grid-cols-3 gap-md">
-<!-- PLACEHOLDER — replace with a real review before launch -->
+<div class="grid grid-cols-1 gap-md max-w-[560px] mx-auto">
 <div class="bg-surface rounded-xl p-lg shadow-sm hover:shadow-md transition-shadow flex flex-col gap-sm">
 <div aria-label="Rated 5 out of 5 stars" class="flex items-center gap-base" role="img">
 <span aria-hidden="true" class="material-symbols-outlined text-primary text-[20px]" style="font-variation-settings:'FILL' 1;">star</span>
@@ -281,40 +283,10 @@
 <span aria-hidden="true" class="material-symbols-outlined text-primary text-[20px]" style="font-variation-settings:'FILL' 1;">star</span>
 <span aria-hidden="true" class="material-symbols-outlined text-primary text-[20px]" style="font-variation-settings:'FILL' 1;">star</span>
 </div>
-<p class="font-body-md text-body-md text-on-surface-variant flex-grow">"The print came out better than I imagined — crisp details and a beautiful finish. Communication was quick and friendly the whole way through."</p>
+<p class="font-body-md text-body-md text-on-surface-variant flex-grow">"Starting with the design process, it went really smoothly. I made a few requests that were easily changed or added to the design, and it came out looking amazing. The communication was great; I knew exactly what the design limits were and how the printing process was going. The overall product is incredible; it is exactly what I asked for. All in all, this is a great place to get any 3D-printed custom items."</p>
 <div class="flex flex-col">
-<span class="font-label-md text-label-md text-on-surface">Jane D.</span>
-<span class="font-label-sm text-label-sm text-on-surface-variant">Articulated dragon gift</span>
-</div>
-</div>
-<!-- PLACEHOLDER — replace with a real review before launch -->
-<div class="bg-surface rounded-xl p-lg shadow-sm hover:shadow-md transition-shadow flex flex-col gap-sm">
-<div aria-label="Rated 5 out of 5 stars" class="flex items-center gap-base" role="img">
-<span aria-hidden="true" class="material-symbols-outlined text-primary text-[20px]" style="font-variation-settings:'FILL' 1;">star</span>
-<span aria-hidden="true" class="material-symbols-outlined text-primary text-[20px]" style="font-variation-settings:'FILL' 1;">star</span>
-<span aria-hidden="true" class="material-symbols-outlined text-primary text-[20px]" style="font-variation-settings:'FILL' 1;">star</span>
-<span aria-hidden="true" class="material-symbols-outlined text-primary text-[20px]" style="font-variation-settings:'FILL' 1;">star</span>
-<span aria-hidden="true" class="material-symbols-outlined text-primary text-[20px]" style="font-variation-settings:'FILL' 1;">star</span>
-</div>
-<p class="font-body-md text-body-md text-on-surface-variant flex-grow">"I needed a functional replacement part fast. They recommended the right material, printed it overnight, and it fit perfectly on the first try."</p>
-<div class="flex flex-col">
-<span class="font-label-md text-label-md text-on-surface">Alex M.</span>
-<span class="font-label-sm text-label-sm text-on-surface-variant">Functional replacement part</span>
-</div>
-</div>
-<!-- PLACEHOLDER — replace with a real review before launch -->
-<div class="bg-surface rounded-xl p-lg shadow-sm hover:shadow-md transition-shadow flex flex-col gap-sm">
-<div aria-label="Rated 5 out of 5 stars" class="flex items-center gap-base" role="img">
-<span aria-hidden="true" class="material-symbols-outlined text-primary text-[20px]" style="font-variation-settings:'FILL' 1;">star</span>
-<span aria-hidden="true" class="material-symbols-outlined text-primary text-[20px]" style="font-variation-settings:'FILL' 1;">star</span>
-<span aria-hidden="true" class="material-symbols-outlined text-primary text-[20px]" style="font-variation-settings:'FILL' 1;">star</span>
-<span aria-hidden="true" class="material-symbols-outlined text-primary text-[20px]" style="font-variation-settings:'FILL' 1;">star</span>
-<span aria-hidden="true" class="material-symbols-outlined text-primary text-[20px]" style="font-variation-settings:'FILL' 1;">star</span>
-</div>
-<p class="font-body-md text-body-md text-on-surface-variant flex-grow">"Fantastic quality prototype at a fair price. The quote arrived within hours and the finished parts shipped ahead of schedule."</p>
-<div class="flex flex-col">
-<span class="font-label-md text-label-md text-on-surface">Priya S.</span>
-<span class="font-label-sm text-label-sm text-on-surface-variant">Product prototype</span>
+<span class="font-label-md text-label-md text-on-surface">Carter F</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Name plate</span>
 </div>
 </div>
 </div>
